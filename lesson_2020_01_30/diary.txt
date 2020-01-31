@@ -1,0 +1,237 @@
+
+healLV@healLV-laptop-PC ~
+$ ls
+
+healLV@healLV-laptop-PC ~
+$ cd /c/Users/healLV/Desktop/sakai/RTR108
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108
+$ ls
+README.md
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108
+$ touch
+touch: missing file operand
+Try `touch --help' for more information.
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108
+$ mkdir lesson_2020_01_30
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108
+$ cd lesson_2020_01_30/
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ touch main.py
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ py main.py
+test
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ py
+Python 3.8.1 (tags/v3.8.1:1b293b6, Dec 18 2019, 23:11:46) [MSC v.1916 64 bit (AM
+D64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> return "test"
+  File "<stdin>", line 1
+SyntaxError: 'return' outside function
+>>> print("test")
+test
+>>> print "test"
+  File "<stdin>", line 1
+    print "test"
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print("test")?
+
+>>> print(type(a))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> a = "1"
+>>> print(type(a))
+<class 'str'>
+>>> a = 1
+>>> print(type(a))
+<class 'int'>
+>>> a = 1.
+>>> print(type(a))
+<class 'float'>
+>>> os.execute()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'os' is not defined
+>>> execute()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'execute' is not defined
+>>> vars()
+{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <cl
+ass '_frozen_importlib.BuiltinImporter'>, '__spec__': None, '__annotations__': {
+}, '__builtins__': <module 'builtins' (built-in)>, 'a': 1.0}
+>>> __name__
+'__main__'
+>>> __name__.[1]
+  File "<stdin>", line 1
+    __name__.[1]
+             ^
+SyntaxError: invalid syntax
+>>> type(__main__)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name '__main__' is not defined
+>>> type(vars.__main__)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'builtin_function_or_method' object has no attribute '__main__'
+>>> vars.__main__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'builtin_function_or_method' object has no attribute '__main__'
+>>> print(a.__doc__)
+Convert a string or number to a floating point number, if possible.
+>>> print("%s"%(a.__doc__))
+Convert a string or number to a floating point number, if possible.
+>>> print("%s"%(a.__doc__))
+Convert a string or number to a floating point number, if possible.
+>>> a = 1
+>>> print("%s"%(a.__doc__))
+int([x]) -> integer
+int(x, base=10) -> integer
+
+Convert a number or string to an integer, or return 0 if no arguments
+are given.  If x is a number, return x.__int__().  For floating point
+numbers, this truncates towards zero.
+
+If x is not a number or if base is given, then x must be a string,
+bytes, or bytearray instance representing an integer literal in the
+given base.  The literal can be preceded by '+' or '-' and be surrounded
+by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
+Base 0 means to interpret the base from the string as an integer literal.
+>>> int('0b100', base=0)
+4
+>>> print(a.__doc__)
+int([x]) -> integer
+int(x, base=10) -> integer
+
+Convert a number or string to an integer, or return 0 if no arguments
+are given.  If x is a number, return x.__int__().  For floating point
+numbers, this truncates towards zero.
+
+If x is not a number or if base is given, then x must be a string,
+bytes, or bytearray instance representing an integer literal in the
+given base.  The literal can be preceded by '+' or '-' and be surrounded
+by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
+Base 0 means to interpret the base from the string as an integer literal.
+>>> int('0b100', base=0)
+4
+>>> exit()
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ py main.py
+{'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_f
+rozen_importlib_external.SourceFileLoader object at 0x0000000001D59640>, '__spec
+__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>
+, '__file__': 'main.py', '__cached__': None}
+vars([object]) -> dictionary
+
+Without arguments, equivalent to locals().
+With an argument, equivalent to object.__dict__.
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ python
+python.exe    python3.dll   python38.dll  pythonw.exe
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ python
+python.exe    python3.dll   python38.dll  pythonw.exe
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ python
+python.exe    python3.dll   python38.dll  pythonw.exe
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ python --version
+Python 3.8.1
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ py main.py
+bigger
+second print
+22 10
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ py main.py
+bigger
+second print
+22 2
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ py main.py
+bigger
+second print
+22 2
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ py
+Python 3.8.1 (tags/v3.8.1:1b293b6, Dec 18 2019, 23:11:46) [MSC v.1916 64 bit (AM
+D64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> execute()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'execute' is not defined
+>>> exec()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: exec expected at least 1 argument, got 0
+>>> exec("main.py")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 1, in <module>
+NameError: name 'main' is not defined
+>>> exec(main.py)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'main' is not defined
+>>> exec("echo")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 1, in <module>
+NameError: name 'echo' is not defined
+>>> math.cos()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'math' is not defined
+>>> import math
+>>> math.cos()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cos() takes exactly one argument (0 given)
+>>> math.cos(1)
+0.5403023058681397
+>>> cos(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cos' is not defined
+>>> math.acos(1)
+0.0
+>>> math.acos(0,5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: acos() takes exactly one argument (2 given)
+>>> math.acos(0.5)
+1.0471975511965979
+>>> math.acos(0)
+1.5707963267948966
+>>> math.cos(1.57)
+0.0007963267107332633
+>>> exit()
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$ py main.py
+bigger
+second print
+22 2
+
+healLV@healLV-laptop-PC /c/Users/healLV/Desktop/sakai/RTR108/lesson_2020_01_30
+$
