@@ -1,4 +1,4 @@
-##Kods:
+## Kods:
 ```python
 import sys
 
@@ -94,6 +94,6 @@ window.show()
 sys.exit(app.exec_())
 ```
 
-##Attēli:
-![Tukšs](https://raw.githubusercontent.com/okass/RTR108/P07_GUI/empty.png)
-![Ielādēts attēls](https://raw.githubusercontent.com/okass/RTR108/P07_GUI/loaded.png)
+## Attēli:
+![Tukšs](https://raw.githubusercontent.com/okass/RTR108/master/P07_GUI/empty.png)
+![Ielādēts attēls](https://raw.githubusercontent.com/okass/RTR108/master/P07_GUI/loaded.png)

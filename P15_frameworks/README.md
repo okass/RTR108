@@ -5,5 +5,5 @@ Izveidoto projektu palaidu ar `ng serve --open`.
 Lapai varēja piekļūt lokāli no `http://localhost:4200/`.
 Globālai piekļuvei tika izmantots `ngrok` starpniekservera rīks.
 
-!(Lokālā piekļuve)[https://raw.githubusercontent.com/okass/RTR108/P15_frameworks/local.png]
-!(Globālā piekļuve)[https://raw.githubusercontent.com/okass/RTR108/P15_frameworks/global.png]
+!(Lokālā piekļuve)[https://raw.githubusercontent.com/okass/RTR108/master/P15_frameworks/local.png]
+!(Globālā piekļuve)[https://raw.githubusercontent.com/okass/RTR108/master/P15_frameworks/global.png]
