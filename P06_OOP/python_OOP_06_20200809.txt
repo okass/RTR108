@@ -1,0 +1,4 @@
+C:\Users\healLV\Desktop\sakai\RTR108\P06_OOP>py python_OOP_06_20200809.py
+chuck
+chuck
+chuck

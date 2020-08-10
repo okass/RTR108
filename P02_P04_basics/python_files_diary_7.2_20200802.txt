@@ -1,0 +1,7 @@
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>py python_files_7.2_20200801
+.py
+Enter file name: mbox-short.txt
+Average spam confidence: 0.7507185185185187
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>

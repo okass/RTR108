@@ -1,0 +1,6 @@
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>py python_strings_6.5_202008
+01.py
+0.8475
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>

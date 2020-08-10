@@ -1,0 +1,14 @@
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>py python_logic_3.1_20200801
+.py
+Enter Hours:45
+Enter Rate:10.5
+498.75
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>py python_logic_3.1_20200801
+.py
+Enter Hours:35
+Enter Rate:10.5
+367.5
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>

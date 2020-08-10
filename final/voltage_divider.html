@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- calculation logic-->
+		<script>
+function showError(msg) {
+	var label = document.getElementById("info_label");
+	label.style.color = "red";
+	label.innerHTML = msg;
+}
+
+function showInfo(msg) {
+	var label = document.getElementById("info_label");
+	label.style.color = "blue";
+	label.innerHTML = msg;
+}
+
+
+function calculateVoltage() {
+	var voltage = Number(document.getElementById("voltage").value)
+	var resistor_one = Number(document.getElementById("resistor_one").value)
+	var resistor_two = Number(document.getElementById("resistor_two").value)
+	var v_out = document.getElementById("v_out")
+	console.log(typeof(val))
+	// check if valid input
+	if (isNaN(voltage)) {
+		console.log("Voltage is not a number");
+		showError("Spriegums nav skaitlis!")
+		return;
+	} else if (isNaN(resistor_one)) {
+		console.log("Resistor 1 is not a number");
+		showError("Pretestība 1 nav skaitlis!")
+		return;
+	} else if (isNaN(resistor_two)) {
+		console.log("Resistor 2 is not a number");
+		showError("Pretestība 2 nav skaitlis!")
+		return;
+	} else if (resistor_one == 0 || resistor_two == 0) {
+		console.log("Resistors are zero");
+		showError("Pretestības nevar būt vienādas ar nulli!")
+		return;
+	} else if (voltage == 0) {
+		console.log("Voltage is zero");
+		showError("Spriegums nevar būt vienāds ar nulli!")
+		return;
+	}
+	showInfo("Kļūdu nav.");
+	
+	v_out.innerHTML = ((voltage * resistor_two)/(resistor_two + resistor_one)).toFixed(5);
+}
+
+		</script>
+	</head>
+	<style>
+		h1 {
+			text-align: center;
+		}
+		
+		/* https://www.w3schools.com/css/css_align.asp */
+		.center {
+			margin: auto;
+			width: 50%;
+			border: 3px solid green;
+			padding: 10px;
+		}
+		
+		/* https://stackoverflow.com/questions/32819543/draw-a-line-in-a-div/32819563 */
+		.v_out_top{
+			height: 40px;
+			border-left: 1px solid black;
+			position: absolute;
+			left: 400px;
+			top: 220px;
+		}
+		.v_out_bottom{
+			height: 40px;
+			border-left: 1px solid black;
+			position: absolute;
+			left: 400px;
+			top: 290px;
+		}
+	</style>
+	<body>
+		<h1>Sprieguma dalītāja aprēķins</h1> <br>
+		<!--Sprieguma dalītāja kaste-->
+		<div class="center" style="position: relative;
+					width: 500px; 
+					height: 400px; 
+					border: 1px solid;">
+		
+		<img src="media/sch.png" id="sch.png">
+		
+		<!--Voltage input-->
+		<div style="position: absolute; left: 10px; top: 180px;">
+			<input id="voltage" type="text" value="0"
+					style="width: 30px;"/>
+			<div style="padding-left: 5px; float: right;">V</div>
+		</div>
+		<!--Resistor 1 input-->
+		<div style="position: absolute; left: 290px; top: 150px;">
+			<input id="resistor_one" type="text" value="0"
+					style="width: 30px;"/>
+			<div style="padding-left: 5px; float: right;">Ω</div>
+		</div>
+		<!--Resistor 2 input-->
+		<div style="position: absolute; left: 290px; top: 260px;">
+			<input id="resistor_two" type="text" value="0"
+					style="width: 30px;"/>
+			<div style="padding-left: 5px; float: right;">Ω</div>
+		</div>
+		
+		<!--Calculate button-->
+		<div style="position: absolute; left: 50%; top: 360px;">
+			<button id="calculate" onClick="calculateVoltage()"
+					style="position: relative; left: -50%;">
+					Aprēķināt!</button>
+		</div>
+		
+		<!--Info label-->
+		<div style="position: absolute; left: 50%; top: 390px;">
+			<div id="info_label" style="position: relative; left: -50%;"></div>
+		</div>
+		
+		<!--V_out-->
+		<div class="v_out_top"></div>
+		<div style="position: absolute; left: 380px; top: 260px;">
+			V<sub>out</sub> = 
+			<div style="float: right;">V</div>
+			<div id="v_out" style="float: right;">0</div>
+		</div>
+		<div class="v_out_bottom"></div>
+		
+		</div>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>py python_variables_2.3_2020
+_20200801.py
+Enter Hours:35
+Enter Rate:2.75
+Pay: 96.25
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>py python_variables_2.3_2020
+_20200801.py
+Enter Hours:40
+Enter Rate:2.75
+Pay: 110.0
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>

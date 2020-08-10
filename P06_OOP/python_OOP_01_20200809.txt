@@ -1,0 +1,5 @@
+C:\Users\healLV\Desktop\sakai\RTR108\P06_OOP>py python_OOP_01_20200809.py
+So far 1
+So far 2
+So far 3
+So far 4

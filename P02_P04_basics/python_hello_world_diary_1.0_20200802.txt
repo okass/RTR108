@@ -1,0 +1,6 @@
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>py python_hello_world_1.0_20
+200801.py
+hello world
+
+C:\Users\healLV\Desktop\sakai\RTR108\P02_P04_basics>

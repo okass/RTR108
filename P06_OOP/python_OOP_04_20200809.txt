@@ -1,0 +1,6 @@
+C:\Users\healLV\Desktop\sakai\RTR108\P06_OOP>py python_OOP_04_20200809.py
+Sally constructed
+Jim constructed
+Sally party count 1
+Jim party count 1
+Sally party count 2

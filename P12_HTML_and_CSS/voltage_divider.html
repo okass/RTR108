@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="voltage_divider.css">
+	</head>
+	<style>
+	.par {
+		padding-left: 60px;
+	}
+	
+	li { 
+		padding-bottom: 10px;
+	}
+	
+	table {
+		border-collapse: collapse;
+	}
+	
+	table, th, td {
+		border: 1px solid black;
+	}
+	</style>
+	<body>
+		<div style="text-align:center;
+					font-size: 50px; 
+					padding-top: 256px;
+					padding-bottom: 256px;
+					font-weight: bold;">
+			Ķēžu simulācija SPICE vidē izmantojot gEDA rīkkopu</div>
+		
+	<div class="item"><h1 class="nr">Priekšnosacījumi</h1>
+		
+		<div class="item"><h2 class="nr">
+		Instalēšana uz linux sistēmām, kas izmanto ”Advanced Package Tool”(apt)<br>
+		(Debian, Ubuntu)
+		</h2>
+		
+		<div class="par">
+			<ul>
+			
+			<li>Izmantojot root kontu tieši: 
+			Ielogojas root kontā ar <b>su</b> un tad <b>apt-get install geda</b></li>
+			
+			<li> Izmantojot <b>sudo</b> komandu: 
+			<b>sudo apt-get install geda</b>, kas izpildīs komandu kā root lietotājs.</li>
+			
+			</ul>
+		</div>
+		
+		</div>
+		
+		<div class="item"><h2 class="nr">
+		Instalēšana uz linux sistēmām, kas izmanto ”pacman”<br>
+		(Arch linux)
+		</h2>
+		
+		<div class="par">
+			<ul>
+			
+			<li>Izmantojot root kontu tieši: 
+			Ielogojas root kontā ar <b>su</b> un tad <b>pacman -S geda-gaf</b></li>
+			
+			<li> Izmantojot <b>sudo</b> komandu: 
+			<b>sudo pacman -S geda-gaf</b>, kas izpildīs komandu kā root lietotājs.</li>
+			
+			</ul>
+		</div>
+		
+		</div>
+		
+	</div>
+	
+	
+	<div class="item"><h1 class="nr">Shēmas zīmēšana</h1>
+		
+		<div class="item"><h2 class="nr">
+		Komandrindā atver gschem vai arī izvēlas to no programmu saraksta vai
+		sākuma izvēlnes, kā tas ir ja sistēma lieto GNOME vai LXDE.
+		</h2>
+		
+		<div class="par">
+		Pēc atvēršanas ir redzams tukšas shēmas logs.<br>
+		Tiks izveidots sprieguma dalītāja slēgums.<br> <br>
+		<img src="media/jauns_logs.png">
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">Atver komponenšu izvēlni</h2>
+		
+		<div class="par">
+		Atver ar <b>I</b> vai ikonu rīkjoslā.<br> <br>
+		<img src="media/add_component.png">
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Izvēlas un uzliek sprieguma avotu no komponenšu saraksta</h2>
+		
+		<div class="par">
+		<img src="media/select_voltage.png">
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Izvēlas un uzliek rezistoru no komponenšu saraksta</h2>
+		
+		<div class="par">
+		<img src="media/select_resistor.png"> <br> <br>
+		
+		<b><i>Piebilde: komponentes var rotēt nospiežot E + R 
+		vai izvēloties opciju no izvēlnes Edit.
+		Pārvietot var ar M vai izvēloties opciju no izvēlnes Edit.</i></b>
+		
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">Savieno komponentes</h2>
+		
+		<div class="par">
+		”Node” rīku izvēlas ar <b>N</b> vai ikonu. <br> <br> 
+		<img src="media/add_net.png">
+		
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">Iestata komponenšu vērtības</h2>
+		
+		<div class="par">
+		Komponenšu vērtības var mainīt uzspiežot dubult-klikšķi
+		uz izvēlētās komponentes.<br> <br> 
+		
+		<table>
+			<tr>
+				<th>Komponente</th>
+				<th>Vienība</th>
+				<th>Vērtība</th>
+			</tr>
+			<tr>
+				<th>V1</th>
+				<th>V</th>
+				<th>studenta apliecības numura pēdējo trīs 
+					ciparu skaitlis dalīts ar 10</th>
+			</tr>
+			<tr>
+				<th>R1</th>
+				<th>Ω</th>
+				<th>studenta apliecības numura priekšpēdējā cipara skaitlis + 1</th>
+			</tr>
+			<tr>
+				<th>R2</th>
+				<th>Ω</th>
+				<th>studenta apliecības numura pēdējā cipara skaitlis + 1</th>
+			</tr>
+		</table> <br> <br>
+		
+		<!--Lai nebūtu jāpielieto js izmantoju http://jkorpela.fi/math/ ieteikumus-->
+		
+		Gala rezultātu sprieguma dalītājam var izrēķināt ar 
+		<i>V<sub>out</sub>=V1*R<sub>2</sub>/(R<sub>1</sub>+R<sub>2</sub>)</i>
+		
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">Iestata zemes punktu</h2>
+		
+		<div class="par">
+		Izvēlas savienojumu, kurš būs zemējums, rediģē to 
+		un pievieno opciju ”netname” ar vērtību 0.<br>
+		<b><i>Piebilde: Zemējuma simbola iestatīšana nav obligāta, 
+		bet šeit ir norādīta vieglākai pārskatāmībai.</i></b>
+		
+		</div>
+			
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Saglabā ķēdi kā <i>voltage_divider.sch</i></h2></div>
+		
+		
+		<div class="item"><h2 class="nr">Gala rezultāts</h2>
+		
+		<div class="par">
+		<img src="media/rezultats.png">
+		
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Saglabā shēmu kā PostScript(PS) failu atverot izvēlni <i>File</i>, 
+		izvēloties <i>Print</i> un izvēloties opciju ”Print to file”.</h2></div>
+		
+		
+		
+	</div>
+	
+	
+	<div class="item"><h1 class="nr">SPICE netlist izveidošana</h1>
+		
+		<div class="item"><h2 class="nr">
+		Atver komandrindu vietā, kur tika saglabāta ķedes shēma.</h2></div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Izpilda <i>gnetlist -g -o voltage_divider.net voltage_divider.sch</i>,
+		kas izveido SPICE netlist no iepriekš uzzīmētās shēmas.</h2></div>
+	</div>
+	
+	
+	<div class="item"><h1 class="nr">SPICE simulācija ar <i>ngspice</i></h1>
+		
+		<div class="item"><h2 class="nr">Komandrindā atver <i>ngspice</i>.</h2></div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Ar source <i>voltage_divider.net</i> iestata ģenerēto SPICE netlist
+		kā ievades avotu simulatoram.</h2>
+		
+		<div class="par">
+		Izvades rezultāts: <br> <br>
+		
+		<div style="font-family: monospace;">
+			<pre>
+ngspice 1 -> source voltage_divider.net
+
+Circuit: * spice netlister for gnetlist
+			</pre>
+		</div>
+		
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Ar <i>tran 0.05ms 5ms</i> veic ķēdes simulāciju pārejas režīmā.</h2>
+		
+		<div class="par">
+		Ķēde tiek simulēta ar soli 0.05ms līdz 5ms solim.<br>
+		Pārejas režīma simulācija ir domāta maiņstrāvas ķēdēm, 
+		bet var izmantot arī līdzstrāvas ķēdēm, kā šinī gadījumā.<br>
+		Izvades rezultāts: <br> <br>
+		
+		<div style="font-family: monospace;">
+			<pre>
+ngspice 1 -> tran 0.05ms 5ms
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+2                                      9.92857
+1                                         13.9
+v1#branch                            -0.992857
+
+
+No. of Data Rows : 108
+			</pre>
+		</div>
+		
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Iestata grafika fona krāsu ar <i>set hcopypscolor = 0</i></h2></div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Izvada uz ekrāna simulācijas rezultātu vadā ”1” ar <i>plot ”1”</i></h2>
+		
+		<div class="par">
+		<img src="media/rez_1.png"> <br> <br>
+		<b><i>Piebilde: Vadā ”1” tiek rādīts spriegums sprieguma avotam V1.</i><b>
+		
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Saglabā izveidoto grafiku ar 
+		<i>hardcopy voltage_divider_Vnode1.ps ”1”</i></h2></div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Izvada uz ekrāna simulācijas rezultātu vadā ”2” ar <i>plot ”2”</i></h2>
+		
+		<div class="par">
+		<img src="media/rez_2.png"> <br> <br>
+		<b><i>Piebilde: Vadā ”2” tiek rādīts spriegums V<sub>out</sub> 
+		jeb sprieguma dalītāja izvades spriegums.</i><b>
+		
+		</div>
+		
+		</div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Saglabā izveidoto grafiku ar 
+		<i>hardcopy voltage_divider_Vnode1.ps ”1”</i></h2></div>
+		
+		
+		<div class="item"><h2 class="nr">
+		Pēc lietošanas ngspice aizver ar komandu <i>exit</i>.</h2></div>
+		
+		<br>
+		<br>
+	</div>
+	
+	</body>
+</html>
